@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerTheme" parent="Base.Widget.AppCompat.Spinner">
+<!--        <item name="colorControlNormal">@color/purple_200</item>-->
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

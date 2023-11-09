@@ -1,0 +1,58 @@
+package com.example.nutritiontracking;
+
+public class FoodSearchModel {
+    private String foodName;
+    private String serving_unit;
+    private String imgUrl;
+    private boolean branded;
+    private String nix_brand_id;
+
+    public FoodSearchModel(String foodName, String serving_unit, String imgUrl, boolean branded, String nix_brand_id) {
+        this.foodName = foodName;
+        this.serving_unit = serving_unit;
+        this.imgUrl = imgUrl;
+        this.branded = branded;
+        this.nix_brand_id = nix_brand_id;
+    }
+
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
+
+    public String getServing_unit() {
+        return serving_unit;
+    }
+
+    public void setServing_unit(String serving_unit) {
+        this.serving_unit = serving_unit;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public boolean isBranded() {
+        return branded;
+    }
+
+    public void setBranded(boolean branded) {
+        this.branded = branded;
+    }
+
+    public String getNix_brand_id() {
+        return nix_brand_id;
+    }
+
+    public void setNix_brand_id(String nix_brand_id) {
+        this.nix_brand_id = nix_brand_id;
+    }
+}
+

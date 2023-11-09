@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_addFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="@color/floating_btn_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003"
+        app:srcCompat="@drawable/add" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@color/purple_500">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_prev_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_bg"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_today_datePicker"
+                    style="?android:spinnerStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:backgroundTint="@color/main_bg"
+                    android:text="Select Date"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_next_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_bg"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_2"
+                android:elevation="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtView_budget_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:text="Calories Budget:"
+                    android:textAlignment="center"
+                    android:textColor="@color/normal_font_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtView_budget_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_intake_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="10dp"
+                    android:text="Total Calories Intake:"
+                    android:textAlignment="center"
+                    android:textColor="@color/normal_font_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtView_intake_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/nutrition_font_color"
+                    android:textSize="65sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_remaining_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="10dp"
+                    android:text="Remaining Calories:"
+                    android:textAlignment="center"
+                    android:textColor="@color/normal_font_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtView_remaining_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/light_blue"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_breakfast_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Breakfast"
+                            android:textAlignment="center"
+                            android:textColor="@color/normal_font_color" />
+
+                        <TextView
+                            android:id="@+id/txtView_breakfast_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_lunch_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lunch"
+                            android:textAlignment="center"
+                            android:textColor="@color/normal_font_color" />
+
+                        <TextView
+                            android:id="@+id/txtView_lunch_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_dinner_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dinner"
+                            android:textAlignment="center"
+                            android:textColor="@color/normal_font_color" />
+
+                        <TextView
+                            android:id="@+id/txtView_dinner_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_others_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Others"
+                            android:textAlignment="center"
+                            android:textColor="@color/normal_font_color" />
+
+                        <TextView
+                            android:id="@+id/txtView_others_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Details" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_carbs_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Carbs"
+                            android:textAlignment="center"
+                            android:textColor="@color/yellow" />
+
+                        <TextView
+                            android:id="@+id/txtView_carbs_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 g"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_protein_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Protein"
+                            android:textAlignment="center"
+                            android:textColor="@color/yellow" />
+
+                        <TextView
+                            android:id="@+id/txtView_protein_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 g"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_fat_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fat"
+                            android:textAlignment="center"
+                            android:textColor="@color/yellow" />
+
+                        <TextView
+                            android:id="@+id/txtView_fat_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 g"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtView_personal_info_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:text="Personal Information:"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_weight_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Weight"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txtView_weight_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 kg"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_height_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Height"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txtView_height_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 cm"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.333"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtView_bmi_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BMI"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txtView_bmi_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/light_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtView_food_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:text="Tips of the day:"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtView_tips_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="10sp"
+                    android:text="Not drinking enough water is one of the most common causes of headaches, poor concentration and tiredness. Long-term dehydration can lead to constipation and urinary tract infections. Download an app such as Waterlogged to remind you to drink regularly. "
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

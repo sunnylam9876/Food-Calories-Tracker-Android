@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Nutrition Tracking</string>
+    <string name="menu_setting">Settings</string>
+    <string-array name="meal_selection">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>

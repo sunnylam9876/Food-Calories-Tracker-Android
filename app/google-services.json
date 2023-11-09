@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "218299648334",
+    "project_id": "nutritiontracking-b4bbb",
+    "storage_bucket": "nutritiontracking-b4bbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218299648334:android:40aef739e49d8f3728f61f",
+        "android_client_info": {
+          "package_name": "com.example.nutritiontracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218299648334-v7vph9b3rcmbajk3cq93m55gre5l7e9r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG_aKcy5olS6ipiyV7VCwTT5P4eWd6pEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218299648334-v7vph9b3rcmbajk3cq93m55gre5l7e9r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
